@@ -41,5 +41,3 @@ def main():
         login()
     elif choice == "Register":
         register()
-
-utils.close_file(data_file)

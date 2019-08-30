@@ -8,7 +8,3 @@ def write_file(file_path, data):
 def load_file(file_path):
     with open(file_path, "r") as json_file:
         return json.load(json_file)
-
-def close_file(file_path):
-        with open(file_path, "r") as json_file:
-                json_file.close()
