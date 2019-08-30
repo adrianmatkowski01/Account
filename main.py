@@ -5,6 +5,7 @@ utils.check_file(data_file)
 data = utils.load_file(data_file)
 
 def login():
+    # Login function
     log_in = None
     password = None
     log_in = input("Login: ")
@@ -23,6 +24,7 @@ def login():
         login()
 
 def register():
+    # Register function
     log_in = input("Enter your Login: ")
     password = input("Enter your Password: ")
     re_password = input("Re-Enter your Password: ")
@@ -40,6 +42,7 @@ def register():
         register()
 
 def main():
+    # Main funtion
     utils.generate_key()
     print("Hello, would you want to Log in or Register?\n")
     choice = input()
