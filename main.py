@@ -1,11 +1,12 @@
 import utils
 
 data_file = "data.json"
+utils.check_file(data_file)
 data = utils.load_file(data_file)
 
 def login():
-    # log_in = None
-    # password = None
+    log_in = None
+    password = None
     log_in = input("Login: ")
     password = input("Password: ")
     if log_in == "".join(data.keys()) and password == "".join(data.values()):
@@ -14,6 +15,7 @@ def login():
         print("Closing!")
     else:
         print("Something went wrong...\nPlease try again!")
+        # Debugging 
         # print("".join(data.keys()))
         # print("".join(data.values()))
         login()
@@ -38,6 +40,8 @@ def main():
         login()
     elif choice == "Register":
         register()
+    elif choice == "close":
+        print("Closing!")
 
 if __name__ == "__main__":
     main()
