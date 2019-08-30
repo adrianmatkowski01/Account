@@ -1,14 +1,11 @@
 import utils
 
-if __name__ == "__main__":
-    main()
-
 data_file = "data.json"
 data = utils.load_file(data_file)
-# Function used to log in
+
 def login():
-    log_in = None
-    password = None
+    # log_in = None
+    # password = None
     log_in = input("Login: ")
     password = input("Password: ")
     if log_in == "".join(data.keys()) and password == "".join(data.values()):
@@ -20,7 +17,7 @@ def login():
         # print("".join(data.keys()))
         # print("".join(data.values()))
         login()
-# Function used to register
+
 def register():
     log_in = input("Enter your Login: ")
     password = input("Enter your Password: ")
@@ -33,7 +30,7 @@ def register():
     else:
         print("Your Passwords dont match!\nTry again!")
         register()
-# Main function
+
 def main():
     print("Hello, would you want to Log in or Register?\n")
     choice = input()
@@ -41,3 +38,6 @@ def main():
         login()
     elif choice == "Register":
         register()
+
+if __name__ == "__main__":
+    main()
