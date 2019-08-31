@@ -25,7 +25,7 @@ def check_file(file_path):
 
 def generate_key():
         # Generates secret encryption key
-        if os.path.isfile(key_path) == False:
+        if os.path.isfile(key_path) == False: # Checks if there is already a key generated
                 key_data = Fernet.generate_key()
                 key_file = open("key.data", "wb")
                 key_file.write(key_data)
